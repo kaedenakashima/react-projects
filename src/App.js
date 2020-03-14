@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import Toggle from './ToggleRenderProps';
-import Toggle from './ToggleRPC';
-import Portal from './Portal';
-import Modal from './Modal';
+import { Modal, Portal, Toggle } from './Utilities';
 
 function App() {
   return (
@@ -23,15 +21,13 @@ function App() {
           Learn React
         </a>
       </header>
-      <Modal>
-        <h1>Still in modal</h1>
-      </Modal>
       <Toggle>
         {({ on, toggle }) => (
           <>
-            {on && <h1>Show Me</h1>}
-            <button onClick={toggle}>Show / Hide</button>
-            <Portal>{on && <h1>Hi. I'm a portal!</h1>}</Portal>
+            <button onClick={toggle}>Login</button>
+            <Modal on={on} toggle={toggle}>
+              <h1>Still what's up this is Katie</h1>
+            </Modal>
           </>
         )}
       </Toggle>
