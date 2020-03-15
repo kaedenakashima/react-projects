@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import Toggle from './ToggleRenderProps';
-import { Modal, Portal, Toggle } from './Utilities';
+import { Toggle } from 'Utilities';
+import { Modal } from 'Elements';
 
 function App() {
   return (
